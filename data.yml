@@ -25,7 +25,13 @@ locations:
       "8":
         database: TRAM_COA_HOL
         schema: WORKPROD
-macros: {}
+macros:
+  Macro-1:
+    id: "1"
+    macroString: |-
+      {%- macro even_odd(column) -%}
+          CASE WHEN MOD({{ column }}, 2) = 0 THEN 'EVEN' ELSE 'ODD' END
+      {%- endmacro %}
 packages: {}
 projects: {}
 stepTypes:
