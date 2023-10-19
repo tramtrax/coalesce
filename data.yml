@@ -8,6 +8,13 @@ jobs:
     name: Job1 - Line Item Orders
     steps: []
     subgraphs: []
+  Job-5:
+    excludeSelector: +{name:FCT_LINEITEM_ORDERS}
+    id: 5
+    includeSelector: "{*}"
+    name: Job2 - Misc
+    steps: []
+    subgraphs: []
 locations:
   MISC_SRC:
     mappingDefinitions:
