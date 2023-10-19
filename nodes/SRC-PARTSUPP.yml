@@ -1,10 +1,10 @@
 steps:
-  NOSTROMO_SRC2-8ea15b64-0a5e-457a-8f57-c3787a8b9af8:
+  PARTSUPP-a3cf6317-262e-4fc3-b425-fe5e49c6038a:
     operation:
       database: ""
       dataset: ""
       deployEnabled: true
-      description: ""
+      description: Partsupp data as defined by TPC-H
       locationID: ""
       locationName: SRC
       metadata:
@@ -14,14 +14,14 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 401c7822-52a4-4461-92d9-b47326f955d8
-              stepCounter: 8ea15b64-0a5e-457a-8f57-c3787a8b9af8
+              columnCounter: 49a3f000-2da5-416d-988f-28f6aeafddce
+              stepCounter: a3cf6317-262e-4fc3-b425-fe5e49c6038a
             config: {}
             dataType: NUMBER(38,0)
             defaultValue: ""
             description: ""
-            name: N_CREWKEY
-            nullable: true
+            name: PS_PARTKEY
+            nullable: false
             primaryKey: false
             uniqueKey: false
           - acceptedValues:
@@ -29,14 +29,14 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: bc0663d6-0a82-41ed-8884-35211bc9de1f
-              stepCounter: 8ea15b64-0a5e-457a-8f57-c3787a8b9af8
+              columnCounter: 7af61c20-5cca-431b-87a1-5b84951dce3c
+              stepCounter: a3cf6317-262e-4fc3-b425-fe5e49c6038a
             config: {}
-            dataType: VARCHAR(50)
+            dataType: NUMBER(38,0)
             defaultValue: ""
             description: ""
-            name: N_FIRSTNAME
-            nullable: true
+            name: PS_SUPPKEY
+            nullable: false
             primaryKey: false
             uniqueKey: false
           - acceptedValues:
@@ -44,14 +44,14 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: b5bdece0-6a13-430e-85c5-e81347c72b23
-              stepCounter: 8ea15b64-0a5e-457a-8f57-c3787a8b9af8
+              columnCounter: d7648310-7d8d-4e9f-9e00-2f9595f052e7
+              stepCounter: a3cf6317-262e-4fc3-b425-fe5e49c6038a
             config: {}
-            dataType: VARCHAR(1)
+            dataType: NUMBER(38,0)
             defaultValue: ""
             description: ""
-            name: N_MIDDLEINITIAL
-            nullable: true
+            name: PS_AVAILQTY
+            nullable: false
             primaryKey: false
             uniqueKey: false
           - acceptedValues:
@@ -59,14 +59,14 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 2f38d2c8-93ba-4044-bf34-433060d184d0
-              stepCounter: 8ea15b64-0a5e-457a-8f57-c3787a8b9af8
+              columnCounter: 320916dd-c4b8-4961-ad6c-389f75c768b0
+              stepCounter: a3cf6317-262e-4fc3-b425-fe5e49c6038a
             config: {}
-            dataType: VARCHAR(50)
+            dataType: NUMBER(12,2)
             defaultValue: ""
             description: ""
-            name: N_LASTNAME
-            nullable: true
+            name: PS_SUPPLYCOST
+            nullable: false
             primaryKey: false
             uniqueKey: false
           - acceptedValues:
@@ -74,21 +74,21 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: b6f7cae3-d46f-47b0-a3f8-9ed3dc68309a
-              stepCounter: 8ea15b64-0a5e-457a-8f57-c3787a8b9af8
+              columnCounter: adc2f3fb-00aa-4c12-8016-f7ac464fe8f7
+              stepCounter: a3cf6317-262e-4fc3-b425-fe5e49c6038a
             config: {}
-            dataType: VARCHAR(152)
+            dataType: VARCHAR(199)
             defaultValue: ""
             description: ""
-            name: N_COMMENT
+            name: PS_COMMENT
             nullable: true
             primaryKey: false
             uniqueKey: false
         join:
-          joinCondition: FROM {{ ref('SRC', 'NOSTROMO_SRC2') }}
-      name: NOSTROMO_SRC2
+          joinCondition: FROM {{ ref('SRC', 'PARTSUPP') }}
+      name: PARTSUPP
       schema: ""
       sqlType: Source
-      table: NOSTROMO_SRC2
+      table: PARTSUPP
       type: sourceInput
-    stepCounter: 8ea15b64-0a5e-457a-8f57-c3787a8b9af8
+    stepCounter: a3cf6317-262e-4fc3-b425-fe5e49c6038a

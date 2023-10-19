@@ -147,13 +147,15 @@ steps:
                 transform: ""
         enabledColumnTestIDs: []
         sourceMapping:
-          - customSQL:
+          - aliases:
+              NOSTROMO_SRC1: f8270a9d-13f3-4ff1-af91-c600921257cd
+            customSQL:
               customSQL: ""
             dependencies:
-              - locationName: SRC
+              - locationName: MISC_SRC
                 nodeName: NOSTROMO_SRC1
             join:
-              joinCondition: FROM {{ ref('SRC', 'NOSTROMO_SRC1') }} "NOSTROMO_SRC1"
+              joinCondition: FROM {{ ref('MISC_SRC', 'NOSTROMO_SRC1') }} "NOSTROMO_SRC1"
             name: SRC1
             noLinkRefs: []
           - aliases:
@@ -161,10 +163,10 @@ steps:
             customSQL:
               customSQL: ""
             dependencies:
-              - locationName: SRC
+              - locationName: MISC_SRC
                 nodeName: NOSTROMO_SRC2
             join:
-              joinCondition: FROM {{ ref('SRC', 'NOSTROMO_SRC2') }} "NOSTROMO_SRC2"
+              joinCondition: FROM {{ ref('MISC_SRC', 'NOSTROMO_SRC2') }} "NOSTROMO_SRC2"
             name: SRC2
             noLinkRefs: []
           - aliases:
@@ -172,10 +174,10 @@ steps:
             customSQL:
               customSQL: ""
             dependencies:
-              - locationName: SRC
+              - locationName: MISC_SRC
                 nodeName: NOSTROMO_SRC3
             join:
-              joinCondition: FROM {{ ref('SRC', 'NOSTROMO_SRC3') }} "NOSTROMO_SRC3"
+              joinCondition: FROM {{ ref('MISC_SRC', 'NOSTROMO_SRC3') }} "NOSTROMO_SRC3"
             name: SRC3
             noLinkRefs: []
       name: STG_NOSTROMO_COMBINED

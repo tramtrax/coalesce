@@ -6,7 +6,7 @@ steps:
       deployEnabled: true
       description: ""
       locationID: ""
-      locationName: SRC
+      locationName: MISC_SRC
       metadata:
         columns:
           - acceptedValues:
